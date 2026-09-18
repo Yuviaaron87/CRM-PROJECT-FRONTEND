@@ -4,6 +4,7 @@ import {
   ContactRound,
   Kanban,
   ListTodo,
+  StickyNote,
   Settings,
 } from "lucide-react";
 
@@ -34,6 +35,11 @@ export const NAVIGATION_ITEMS = [
     label: "Tasks",
     path: ROUTES.TASKS,
     icon: ListTodo,
+  },
+  {
+    label: "Notes",
+    path: ROUTES.NOTES,
+    icon: StickyNote,
   },
   {
     label: "Settings",

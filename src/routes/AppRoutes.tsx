@@ -12,6 +12,16 @@ import NotFound from "../pages/notFound/NotFound";
 import AddLead from "../pages/leads/AddLead";
 import LeadDetails from "../pages/leads/LeadDetails";
 import EditLead from "../pages/leads/EditLead";
+import AddContact from "../pages/contact/AddContact";
+import ContactDetails from "../pages/contact/ContactDetails";
+import EditContact from "../pages/contact/EditContact";
+import AddDeal from "../pages/pipeline/AddDeal";
+import EditDeal from "../pages/pipeline/EditDeal";
+import DealDetails from "../pages/pipeline/DealDetails";
+import AddTask from "../pages/tasks/AddTask";
+import TaskDetails from "../pages/tasks/TaskDetails";
+import EditTask from "../pages/tasks/EditTask";
+import Notes from "../pages/note/Notes";
 
 const AppRoutes = () => {
   return useRoutes([
@@ -45,13 +55,54 @@ const AppRoutes = () => {
           element: <Contacts />,
         },
         {
+          path: "contacts/add",
+          element: <AddContact />
+        },
+        {
+          path: "contacts/:id",
+          element: <ContactDetails />
+        },
+        {
+          path: "contacts/:id/edit",
+          element: <EditContact />
+        },
+        {
           path: "pipeline",
           element: <Pipeline />,
+        },
+        {
+          path: "pipeline/add",
+          element: <AddDeal />
+        },
+        {
+          path: "pipeline/:id",
+          element: <DealDetails />
+        },
+        {
+          path: "pipeline/:id/edit",
+          element: <EditDeal />
         },
         {
           path: "tasks",
           element: <Tasks />,
         },
+        {
+          path: "tasks/add",
+          element: <AddTask />
+        },
+        {
+          path: "tasks/:id",
+          element: <TaskDetails />
+        },
+        {
+          path: "tasks/:id/edit",
+          element: <EditTask />
+        },
+        {
+            path: "notes",
+            element: <Notes />
+        },
+    
         {
           path: "settings",
           element: <Settings />,
