@@ -1,22 +1,33 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router";
-import { Toaster } from "react-hot-toast";
+import {
+  StrictMode,
+} from "react";
+
+import {
+  createRoot,
+} from "react-dom/client";
+
+import {
+  BrowserRouter,
+} from "react-router";
+
+import {
+  AuthProvider,
+} from "./context/AuthContext";
 
 import App from "./App";
+
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
+createRoot(
+  document.getElementById(
+    "root"
+  )!
+).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
-
-      <Toaster
-        position="top-right"
-        toastOptions={{
-          duration: 3000,
-        }}
-      />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>
 );
